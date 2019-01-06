@@ -1,5 +1,6 @@
 @import "~cube-ui/src/common/stylus/variable.styl"
 
+// 项目中使用的颜色,可以在这里自定义
 $color-background = rgba(7, 17, 27, 1)
 $color-background-s = rgba(7, 17, 27, 0.8)
 $color-background-ss = rgba(7, 17, 27, 0.5)

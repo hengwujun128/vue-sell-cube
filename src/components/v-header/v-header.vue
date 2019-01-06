@@ -32,6 +32,11 @@
 </template>
 
 <script type="text/ecmascript-6">
+/* 1.header 布局,其中背景图片,不是使用 background ,而是直接使用了一个元素
+2. content-wrapper 使用 flex 布局
+3.bulletin-wrapper 也是用了 flex 布局
+4. 显示蒙层组件,主要是通过方法
+*/
 import SupportIco from 'components/support-ico/support-ico'
 
 export default {

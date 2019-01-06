@@ -5,6 +5,7 @@
         <div class="detail-main">
           <h1 class="name">{{seller.name}}</h1>
           <div class="star-wrapper">
+            <!-- star 组件 -->
             <star :size="48" :score="seller.score"></star>
           </div>
           <div class="title">
@@ -14,6 +15,7 @@
           </div>
           <ul v-if="seller.supports" class="supports">
             <li class="support-item" v-for="(item,index) in seller.supports" :key="item.id">
+              <!-- support-ico 组件 -->
               <support-ico :size="2" :type="seller.supports[index].type"></support-ico>
               <span class="text">{{seller.supports[index].description}}</span>
             </li>
@@ -36,6 +38,12 @@
 </template>
 
 <script>
+/* 1. 类似 modal 这样的 component 要放在 body 下面
+  2. 该组件主要是通过方法实现
+  3.tansition 动画,主要fade-enter-active,fade-leave-active,主要是设置 transition;
+  fade-enter,fade-leave-activez 主要设置  opacity: 0;background: $color-background;
+  
+*/
 import popupMixin from 'common/mixins/popup'
 import Star from 'components/star/star'
 import SupportIco from 'components/support-ico/support-ico'
@@ -59,8 +67,8 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-@import '~common/stylus/mixin';
-@import '~common/stylus/variable';
+@import '~common/stylus/mixin.stylus';
+@import '~common/stylus/variable.stylus';
 
 .header-detail {
   position: fixed;

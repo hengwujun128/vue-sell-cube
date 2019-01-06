@@ -28,6 +28,7 @@ export default {
     starType () {
       return 'star-' + this.size
     },
+    // 星星算法
     itemClasses () {
       let result = []
       //  得分换算,获取整数
@@ -39,10 +40,11 @@ export default {
       const hasDecimal = score % 1 !== 0
       // 取小数部分
       const integer = Math.floor(score)
-
+      // 整个星,点亮的全星
       for (let i = 0; i < integer; i++) {
         result.push(CLS_ON)
       }
+      // 半个星
       if (hasDecimal) {
         result.push(CLS_HALF)
       }
@@ -56,7 +58,7 @@ export default {
 </script>
 
 <style lang="stylus">
-@import '~common/stylus/mixin.styl';
+@import '~common/stylus/mixin.stylus';
 
 .star {
   display: flex;
